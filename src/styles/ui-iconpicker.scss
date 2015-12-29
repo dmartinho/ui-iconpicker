@@ -24,110 +24,108 @@
 @import "variables";
 
 .ui-iconpicker {
+  &.brand-default {
 
-	&.brand-default {
-		
-		> button {
-			@include button-variant($btn-default-color, $btn-default-bg, $btn-default-border);
-		}
+    > button {
+      @include button-variant($btn-default-color, $btn-default-bg, $btn-default-border);
+    }
 
-	}
+  }
 
-	&.brand-primary {
-		
-		> button {
-			@include button-variant($btn-primary-color, $btn-primary-bg, $btn-primary-border);
-		}
+  &.brand-primary {
 
-	}
+    > button {
+      @include button-variant($btn-primary-color, $btn-primary-bg, $btn-primary-border);
+    }
 
-	&.brand-success {
-		
-		> button {
-			@include button-variant($btn-success-color, $btn-success-bg, $btn-success-border);
-		}
+  }
 
-	}
+  &.brand-success {
 
-	&.brand-info {
-		
-		> button {
-			@include button-variant($btn-info-color, $btn-info-bg, $btn-info-border);
-		}
+    > button {
+      @include button-variant($btn-success-color, $btn-success-bg, $btn-success-border);
+    }
 
-	}
+  }
 
-	&.brand-warning {
-		
-		> button {
-			@include button-variant($btn-warning-color, $btn-warning-bg, $btn-warning-border);
-		}
+  &.brand-info {
 
-	}
+    > button {
+      @include button-variant($btn-info-color, $btn-info-bg, $btn-info-border);
+    }
 
-	&.brand-danger {
-		
-		> button {
-			@include button-variant($btn-danger-color, $btn-danger-bg, $btn-danger-border);
-		}
+  }
 
-	}
+  &.brand-warning {
 
-	&.disabled,
-	&[disabled],
-	fieldset[disabled] & {
-		
-		> button {
-			cursor: not-allowed;
-			pointer-events: none; // Future-proof disabling of clicks
-			@include opacity(.65);
-			@include box-shadow(none);
-		}
-		
-	}
+    > button {
+      @include button-variant($btn-warning-color, $btn-warning-bg, $btn-warning-border);
+    }
 
+  }
 
-	> button > i {
-		padding-right: .5em;
-	}
-	
-	> ul.dropdown-menu {
-		max-height: 0.1em + ceil(2 * $iconpicker-dropdown-menu-padding-v + $iconpicker-rows-xs * ($iconpicker-button-height + 2 * $iconpicker-button-padding-v + 2 * $iconpicker-button-margin-v));
-		overflow-y: scroll;
-		padding: $iconpicker-dropdown-menu-padding;
-		width: 0.1em + ceil(2 * $iconpicker-dropdown-menu-padding-h + $iconpicker-cols-xs * ($iconpicker-button-width + 2 * $iconpicker-button-padding-h + 2 * $iconpicker-button-margin-h));
+  &.brand-danger {
 
-		@media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
-			max-height: 0.1em + ceil(2 * $iconpicker-dropdown-menu-padding-v + $iconpicker-rows-sm * ($iconpicker-button-height + 2 * $iconpicker-button-padding-v + 2 * $iconpicker-button-margin-v));
-			width: 0.1em + ceil(2 * $iconpicker-dropdown-menu-padding-h + $iconpicker-cols-sm * ($iconpicker-button-width + 2 * $iconpicker-button-padding-h + 2 * $iconpicker-button-margin-h));
-		}
+    > button {
+      @include button-variant($btn-danger-color, $btn-danger-bg, $btn-danger-border);
+    }
 
-		@media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
-			max-height: 0.1em + ceil(2 * $iconpicker-dropdown-menu-padding-v + $iconpicker-rows-md * ($iconpicker-button-height + 2 * $iconpicker-button-padding-v + 2 * $iconpicker-button-margin-v));
-			width: 0.1em + ceil(2 * $iconpicker-dropdown-menu-padding-h + $iconpicker-cols-md * ($iconpicker-button-width + 2 * $iconpicker-button-padding-h + 2 * $iconpicker-button-margin-h));
-		}
+  }
 
-		@media (min-width: $screen-lg-min) {
-			max-height: 0.1em + ceil(2 * $iconpicker-dropdown-menu-padding-v + $iconpicker-rows-lg * ($iconpicker-button-height + 2 * $iconpicker-button-padding-v + 2 * $iconpicker-button-margin-v));
-			width: 0.1em + ceil(2 * $iconpicker-dropdown-menu-padding-h + $iconpicker-cols-lg * ($iconpicker-button-width + 2 * $iconpicker-button-padding-h + 2 * $iconpicker-button-margin-h));
-		}
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] & {
 
-		&::-webkit-scrollbar {
-			width: 0.1em;
-		}
+    > button {
+      cursor: not-allowed;
+      pointer-events: none; // Future-proof disabling of clicks
+      @include opacity(.65);
+      @include box-shadow(none);
+    }
 
-		> li {
-			float: left;
-	
-			button {
-				height  : $iconpicker-button-height;
-				margin  : $iconpicker-button-margin;
-				padding : $iconpicker-button-padding;
-				width   : $iconpicker-button-width;
-			}
+  }
 
-		}
+  > button > i {
+    padding-right: .5em;
+  }
 
-	}
+  > ul.dropdown-menu {
+    max-height: 0.1em + ceil(2 * $iconpicker-dropdown-menu-padding-v + $iconpicker-rows-xs * ($iconpicker-button-height + 2 * $iconpicker-button-padding-v + 2 * $iconpicker-button-margin-v));
+    overflow-y: scroll;
+    padding: $iconpicker-dropdown-menu-padding;
+    width: 0.1em + ceil(2 * $iconpicker-dropdown-menu-padding-h + $iconpicker-cols-xs * ($iconpicker-button-width + 2 * $iconpicker-button-padding-h + 2 * $iconpicker-button-margin-h));
+
+    @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+      max-height: 0.1em + ceil(2 * $iconpicker-dropdown-menu-padding-v + $iconpicker-rows-sm * ($iconpicker-button-height + 2 * $iconpicker-button-padding-v + 2 * $iconpicker-button-margin-v));
+      width: 0.1em + ceil(2 * $iconpicker-dropdown-menu-padding-h + $iconpicker-cols-sm * ($iconpicker-button-width + 2 * $iconpicker-button-padding-h + 2 * $iconpicker-button-margin-h));
+    }
+
+    @media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
+      max-height: 0.1em + ceil(2 * $iconpicker-dropdown-menu-padding-v + $iconpicker-rows-md * ($iconpicker-button-height + 2 * $iconpicker-button-padding-v + 2 * $iconpicker-button-margin-v));
+      width: 0.1em + ceil(2 * $iconpicker-dropdown-menu-padding-h + $iconpicker-cols-md * ($iconpicker-button-width + 2 * $iconpicker-button-padding-h + 2 * $iconpicker-button-margin-h));
+    }
+
+    @media (min-width: $screen-lg-min) {
+      max-height: 0.1em + ceil(2 * $iconpicker-dropdown-menu-padding-v + $iconpicker-rows-lg * ($iconpicker-button-height + 2 * $iconpicker-button-padding-v + 2 * $iconpicker-button-margin-v));
+      width: 0.1em + ceil(2 * $iconpicker-dropdown-menu-padding-h + $iconpicker-cols-lg * ($iconpicker-button-width + 2 * $iconpicker-button-padding-h + 2 * $iconpicker-button-margin-h));
+    }
+
+    &::-webkit-scrollbar {
+      width: 0.1em;
+    }
+
+    > li {
+      float: left;
+
+      button {
+        height: $iconpicker-button-height;
+        margin: $iconpicker-button-margin;
+        padding: $iconpicker-button-padding;
+        width: $iconpicker-button-width;
+      }
+
+    }
+
+  }
 
 }
